@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Array_HigherMayor {
+public class Array_HigherNumber {
     public static void main(String[] args) {
 
         int[] a = new int[5];
