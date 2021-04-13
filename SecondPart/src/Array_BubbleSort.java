@@ -41,25 +41,40 @@ public class Array_BubbleSort {
                 "Chromecast 4ta generación", "Bicicleta Oxford" };
 
         int total = productos.length;
+        int contador = 0;
 
-        sortBurbuja(productos);
+        for(int i = 0; i < total; i++){
+            for(int j = 0; j < total; j++){
+                if( productos[i].compareTo(productos[j]) < 0 ){
+                    String auxiliar = productos[i];
+                    productos[i] = productos[j];
+                    productos[j] = auxiliar;
+                }
+                contador++;
+            }
+        }
+        System.out.println("contador = " + contador);
+
+//        System.out.println("=== Usando metodo sortBurbuja ===");
+//        sortBurbuja(productos);
+//        System.out.println("=== Fin de metodo sortBurbuja ===");
 
         System.out.println("=== Usando for ===");
         for(int i = 0; i < total; i++){
             System.out.println("para indice " + i + " : " + productos[i]);
         }
-
-        Integer[] numeros = new Integer[4];
-
-        numeros[0] = 10;
-        numeros[1] = Integer.valueOf("7");
-        numeros[2] = 35;
-        numeros[3] = -1;
-
-        sortBurbuja(numeros);
-
-        for(int i = 0; i < numeros.length; i++){
-            System.out.println("i = " + i + " : " + numeros[i]);
-        }
+//
+//        Integer[] numeros = new Integer[4];
+//
+//        numeros[0] = 10;
+//        numeros[1] = Integer.valueOf("7");
+//        numeros[2] = 35;
+//        numeros[3] = -1;
+//
+//        sortBurbuja(numeros);
+//
+//        for(int i = 0; i < numeros.length; i++){
+//            System.out.println("i = " + i + " : " + numeros[i]);
+//        }
     }
 }
