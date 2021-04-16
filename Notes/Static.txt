@@ -1,0 +1,27 @@
+
+Hace referencia a un atributo o metodo que pertenece a la clase y no al objeto que instancia la clase. Al modificar un atributo estatico en un objeto se va modificar para todos los demas objetos de dicha instancia.
+
+Ejemplo, si tengo mi clase Automovil y al instanciar esa clase modifico el atributo colorPatente, se va modificar para todos
+    public class Automovil implements Comparable<Automovil>{
+
+        private int id;
+        private String fabricante;
+
+        public static String colorPatente = "naranja";
+    }
+
+
+    public class EjemploAutomovilStatic {
+        public static void main(String[] args) {
+
+            Automovil.colorPatente = "verde");
+            Automovil mazda = new Automovil();
+            Automovil nissan = new Automovil();
+        }
+    }
+
+Tanto mazda como nissan van a tener el colorPatente en naranja.
+Aclaracion, aca se uso el modificador de acceso public en el atributo para el ejemplo.
+
+private static String colorPatente = "";
+Automovil.setColorPatente("naranja")

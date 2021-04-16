@@ -1,0 +1,2 @@
+Hace referencia a variables constantes, es decir, que no pueden ser modificados.
+Suelen ser variables publicos y van completamente en mayuscula.

@@ -1,0 +1,8 @@
+Public
+Puede ser accedido desde cualquier parte.
+
+Private
+Solo puede ser accedido desde la misma clase.
+
+Protected
+Solo puede ser accedido desde el mismo package y de las clases que lo hereden.

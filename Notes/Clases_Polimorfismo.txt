@@ -1,0 +1,39 @@
+Polimorfismo
+
+Suele definirse como ‘Sobrecarga de parámetros’. Es la capacidad que tienen los objetos de una clase en ofrecer respuesta distinta e independiente en función de los parámetros (diferentes implementaciones) utilizados durante su invocación. Dicho de otro modo el objeto como entidad puede contener valores de diferentes tipos durante la ejecución del programa.
+
+Ejemplo
+
+Un ejemplo clásico de poliformismo es el siguiente. Podemos crear dos clases distintas: Gato y Perro, que heredan de la superclase Animal. La clase Animal tiene el método abstracto makesound() que se implementa de forma distinta en cada una de las subclases (gatos y perros suenan de forma distinta). Entonces, un tercer objeto puede enviar el mensaje de hacer sonido a un grupo de objetos Gato y Perro por medio de una variable de referencia de clase Animal, haciendo así un uso polimórfico de dichos objetos respecto del mensaje mover.
+
+        class Animal {
+            public void makeSound() {
+                System.out.println("Grr...");
+            }
+        }
+
+        class Cat extends Animal {
+            public void makeSound() {
+                System.out.println("Meow");
+            }
+        }
+
+        class Dog extends Animal {
+            public void makeSound() {
+                System.out.println("Woof");
+            }
+        }
+
+
+
+Tipos de poliformismo
+    -Sobrecarga: El más conocido y se aplica cuando existen funciones con el mismo nombre en clases que son completamente independientes una de la otra.
+
+    - Paramétrico: Existen funciones con el mismo nombre pero se usan diferentes parámetros (nombre o tipo). Se selecciona el método dependiendo del tipo de datos que se envíe.
+
+    - Inclusión: Es cuando se puede llamar a un método sin tener que conocer su tipo, así no se toma en cuenta los detalles de las clases especializadas, utilizando una interfaz común.
+
+
+    
+
+Link: https://ifgeekthen.everis.com/es/polimorfismo-en-java-programaci%C3%B3n-orientada-objetos#:~:text=En%20programaci%C3%B3n%20orientada%20a%20objetos,implementaciones)%20utilizados%20durante%20su%20invocaci%C3%B3n.
