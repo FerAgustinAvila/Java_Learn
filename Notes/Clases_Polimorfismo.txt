@@ -34,6 +34,19 @@ Tipos de poliformismo
     - Inclusión: Es cuando se puede llamar a un método sin tener que conocer su tipo, así no se toma en cuenta los detalles de las clases especializadas, utilizando una interfaz común.
 
 
+
+Otro ejemplo:
+
+int sumar(int a, int b) {
+    return a + b;
+}
+
+float sumar(float a, float b) { ... }
+float sumar(int a, float b) { ... }
+float sumar(float a, int b) { ... }
+double sumar(double x, double y, double z) { ... }
+int sumar(String a, String b) { ... }
+int sumar(int a, int b, int c, int d) { ... }
     
 
 Link: https://ifgeekthen.everis.com/es/polimorfismo-en-java-programaci%C3%B3n-orientada-objetos#:~:text=En%20programaci%C3%B3n%20orientada%20a%20objetos,implementaciones)%20utilizados%20durante%20su%20invocaci%C3%B3n.

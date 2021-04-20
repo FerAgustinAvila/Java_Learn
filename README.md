@@ -94,3 +94,10 @@ ___
 
 * Exercise / Practise
     * Class
+
+___
+
+
+## Seventh Part
+
+* Overload / Examples
