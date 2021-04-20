@@ -69,3 +69,28 @@ ___
     * Symmetric
     * Identity
     * Frame
+
+___
+
+## Fourth Part
+
+* Classes
+    * Example
+
+___
+
+## Fifth Part
+
+* Packages
+    * Public
+    * Private
+    * Protected
+    * Final
+    * Static
+
+___
+
+## Sixth Part
+
+* Exercise / Practise
+    * Class

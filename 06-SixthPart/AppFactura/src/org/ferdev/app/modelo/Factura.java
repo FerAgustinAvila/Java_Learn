@@ -1,5 +1,6 @@
 package org.ferdev.app.modelo;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Factura {
@@ -57,16 +58,12 @@ public class Factura {
         if (indiceItem < MAX_ITEMS) {
             this.items[indiceItem++] = item;
         }
-
     }
 
     public float calcularTotal() {
         float total = 0.0f;
-        for (ItemFactura item : this.items) {
-            if (item == null) {
-                continue;
-            }
-            total += item.calcularImporte();
+        for (int i = 0; i < indiceItem; i++ ) {
+            total += this.items[ i ].calcularImporte();
         }
         return total;
     }
@@ -77,9 +74,27 @@ public class Factura {
                 .append("\nCliente: ").append(this.cliente.getNombre())
                 .append("\nNIF: ").append(this.cliente.getNif())
                 .append("\nDescripcion: ").append(this.descripcion)
-                .append("n")
-                .append("\n#\tNombre\t$\tCant.\tTotal\n");
+                .append("\n");
+
+        SimpleDateFormat df = new SimpleDateFormat("dd 'de' MMMM, YYYY");
+        sb.append("Fecha Emisión: ").append( df.format( this.fecha ))
+            .append("\n")
+            .append("\n#\tNombre\t$\tCant.\tTotal\n");
+
+
+        for( int i = 0; i < indiceItem; i++ ){
+            sb.append( this.items[ i ].toString() )
+                    .append("\n");
+        }
+
+        sb.append("\n Gran Total: ")
+                .append( calcularTotal() );
 
         return sb.toString();
+    }
+
+    @Override
+    public String toString() {
+        return generarDetalle();
     }
 }
