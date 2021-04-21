@@ -1,0 +1,101 @@
+Mecanismo para implementar relaciones de jerarquia de clases. 
+Una subclase hereda el estado y el comportamiento de todos sus ancestros.
+
+Base para la reutilizacion de codigo y polimorfismo.
+
+1 de los 5 principios de POO.
+
+class Persona { ... }
+class Profesor extends Persona { ... }
+class Alumno extends Persona { ... }
+class AlumnoInternacional extends Alumno { ... }
+
+Profesor y Alumno heredan de Persona, y AlumnoInternacional hereda de Alumno.
+
+El termino superclase se refiere a la clase que es el ancestro mas directo, asi como a todas las clases ascendentes.
+Object es la clase padre de todas las clases. Persona es el heredero mas directo de Object.
+
+
+2 formas de herencia.
+- Generalizacion:
+        Cuando vemos que dos o mas clases tienen en comun atributos y metodos en comun, tendremos que implementar una clase padre y de esta clase las hijas heredan los atributos y metodos. Ej: tenemos las clases Alumno y Profesor, que comparten caracteristicas. Entonces creamos la clase padre Persona.
+
+- Especializacion:
+        Si tenemos una clase y vamos a necesitar una clase parecida pero mas especifica, particular con otros atributos y metodos. Ej: si tenemos clase Persona, y necesitamos clase Alumno, necesitamos los atributos de persona y los suyos propios. 
+        Aqui aplica, Open_Close, abierto a la herencia y cerrado a la modificacion. Ya que no es buena practica modificar la clase Persona que ya la tenemos usando.
+
+____________________________________________________________________________________
+        Palabra SUPER
+
+public class Persona{
+    private String nombre;
+    private String apellido;
+
+    public Persona(String nombre, String apellido){
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
+}
+
+public class Alumno extends Persona{
+    private double promedio;
+
+    public Persona(String nombre, String apellido, double promedio){
+        super( nombre, apellido ); // invocar primero antes que los demas atributos
+        this.promedio = promedio;
+    }
+}
+
+public class EjemploHerencia {
+    public static void main( String[] args){
+        Alumno a = new Alumno("Fernando", "Avila", 8.5)
+    }
+}
+
+____________________________________________________________________________________
+        Sobreescritura de metodos
+
+Se puede escribir un metodo que heredamos.
+
+public class Alumno extends Persona{
+
+    @Override
+    public void metodoDelPadre(){
+        // hacer algo diferente al padre
+    }
+}
+
+
+public class Alumno extends Persona{
+
+    @Override
+    public void metodoDelPadre(){
+        super.metodoDelPadre();
+        // hacer lo mismo pero con algun cambio, extra
+    }
+}
+
+////// Ejemplo
+
+public class Persona{
+    @Override
+    public String toString()(){
+        return this.nombre + " " + this.apellido;
+    }
+}
+
+public class Alumno extends Persona{
+
+    @Override
+    public String toString(){
+        return super.toString() + ", promedio: " + this.promedio; // mantenemos
+    }
+}
+
+____________________________________________________________________________________
+        Restring herencia
+
+Con la palabra final.
+final public class Persona { ... }
+final public void metodoDelPadre(){ ... }

@@ -1,6 +1,5 @@
 # Learn Java
 
-
 ## First Part
 
 * Primitive
@@ -97,7 +96,13 @@ ___
 
 ___
 
-
 ## Seventh Part
 
 * Overload / Examples
+
+___
+
+## Eighth Part
+
+* Inheritance
+    * Example

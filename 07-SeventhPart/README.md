@@ -1,5 +1,5 @@
 
-## Sixth Part
+## Eighth Part
 
-* Exercise / Practise
-    * Class
+* Inheritance
+    * Example
