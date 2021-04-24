@@ -1,0 +1,13 @@
+
+
+Es como una clase abstracta pero no permite que ninguno de sus metodos este implementado.
+Capturar similitudes entre clases no relacionadas sin forzar una relacion entre ellas.
+Es decir definen comportamientos que una o varias clases necesitan implmentar.
+
+public interface Imprible
+
+public class Foto implements Imprible{ ... }
+
+
+Herencia multiple con interfaces
+public class Perro implements IPuedeSaltar, IPuedeCorrer, IPuedeNadar{ ... }

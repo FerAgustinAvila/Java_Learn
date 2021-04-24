@@ -1,5 +1,5 @@
 
-## Eighth Part
+## Seventh Part
 
-* Inheritance
+* Overload
     * Example

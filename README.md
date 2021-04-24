@@ -98,11 +98,26 @@ ___
 
 ## Seventh Part
 
-* Overload / Examples
+* Overload
+    * Example
 
 ___
 
 ## Eighth Part
 
 * Inheritance
+    * Example
+
+___
+
+## Tenth Part
+
+* Abstract
+    * Example
+
+___
+
+## Tenth Part
+
+* Interface
     * Example

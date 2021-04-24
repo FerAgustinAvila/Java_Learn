@@ -1,4 +1,5 @@
 
 ## Seventh Part
 
-* Overload / Example
+* Class
+    * Exercise / Practise
