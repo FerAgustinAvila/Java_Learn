@@ -121,3 +121,11 @@ ___
 
 * Interface
     * Example
+
+___
+
+## Eleventh Part
+
+* Interface
+    * Exercise
+    * + Generic Methods 
