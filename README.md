@@ -129,3 +129,10 @@ ___
 * Interface
     * Exercise
     * + Generic Methods 
+
+___
+
+## Tewlfth Part
+
+* Exceptions
+    * Example / Learn

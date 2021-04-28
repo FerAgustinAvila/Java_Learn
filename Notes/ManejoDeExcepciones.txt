@@ -1,0 +1,58 @@
+
+Una excepcion es un problema o evento que ocurre durante la ejecucion del programa que interrumpe el flujo normal.
+
+El manejo de excepciones nos permite manejar el error y continuar con la ejecucion del programa.
+
+________________________________________________________________________
+                        Estructura
+
+try{
+    bloque que lanza la excepcion
+}catch( Exception e){
+    manejamos el error
+} finally{
+    bloque opcional, siempre se ejecuta
+}
+
+
+EJEMPLO
+try{
+    String valor = JOptionPane.showInputDialog(null, "Ingresar un entero:");
+
+    // Un valor no numerico lanzara un NumberFormatException
+    int divisor = Integer.parseInt(valor);
+
+    // Si la division es 0, lanzara un ArithmeticException
+    System.out.println(10 / divisor);
+}catch( NumberFormatException e){
+    manejamos el error NumberFormatException
+    String mensaje = "Debe ser un numero";
+    Exception e = new Exception( mensaje );
+} catch( ArithmeticException e){
+    manejamos el error ArithmeticException 
+    String mensaje = e.getMessage();
+    e.printStackTrace();
+}
+
+                            THROW
+----  Ejemplo
+public Client byId(int id) throws Exception{
+    if( id == 0){
+        throw new Excepcion("Id no puede ser 0")
+    }
+    .....
+}
+
+                            Excepcion personalizada
+public class ExcPersonalizada extends Exception{
+    public ExcPersonalizada(String mensaje){
+        super( mensaje );
+    }
+}
+
+public Client byId(int id) throws ExcPersonalizada{
+    if( id == 0){
+        throw new ExcPersonalizada("Id no puede ser 0")
+    }
+    .....
+}
