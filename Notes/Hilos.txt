@@ -1,0 +1,86 @@
+Threads.
+
+Objetos que dan la capacidad dehacer mas de una tarea al mismo tiempo.
+Un proceso puede tener varios hilos.
+
+
+
+________ Ciclo de vida de un Thread ________
+---- NEW
+Un hilo NEW es uno que se ha creado pero que aun no se ha iniciado con el metodo start()
+
+Runnable runnable = new Thread();
+Thread t = new Thread(runnable);
+System.out.println(t.getState());
+
+---- RUNNABLE
+Es uno que se ha creado e iniciado con el start()
+
+Runnable runnable = new Thread();
+Thread t = new Thread(runnable);
+t.start();
+System.out.println(t.getState());
+
+---- BLOCKED
+Cuando actualmente no es elegible para ejecutarse.
+
+public static void main(String[] args) throws InterruptedException {
+    Runnable runnable = ()-> recurso();
+
+
+    Thread t1 = new Thread(runnable);
+    Thread t2 = new Thread(runnable);
+    t1.start();
+    t2.start();
+    Thread.sleep( 1000 );
+    System.out.println(t2.getState()); // Blocked
+}
+
+public static synchronized void recurso(){
+    while( true ){}
+}
+
+---- WAITING
+Cuando esta esperando que otro hilo realice una accion en particular.
+Un hilo puede entrar en este estado llamando a cualquiera de los dos metodos wait() y join()
+
+public static void main(String[] args){
+
+    Thread t1 = Thread.currentThread();
+    Thread t2 = new Thread( () -> {
+
+        try{
+            Thread.sleep(5000);
+        } catch ( InterruptedException ){ ... }
+
+        System.out.println( t1.getState() ) // Waiting 
+    });
+
+    t2.start();
+    t2.join();
+}
+
+
+---- TERMINATED
+Este es el estado de un hilo muerto. Cuando ha finalizado la ejecucion o se termino de forma anormal.
+Podemos usar el metodo isAlive() para determinar si el hilo esta vivo o no.
+
+public static void main(String[] args) throws InterruptedException{
+    Thread t1 = new Thread(() -> {
+        // alguna tarea rapida
+    });
+
+    t1.start();
+    Thread.sleep( 1000 );
+
+    System.out.println( t1.getState() ); // Terminated
+    System.out.println( t1.isAlive() ); // false
+}
+
+_________________________________________
+
+Metodos
+
+------ wait(): libera el bloqueo para que otros hilos tengan la oportunidad de acceder a un recurso compartido ( metodo sincronizado ) y queda esperando indefinidamente hasta que el otro hilo invoca el notify() o notifyAll()
+
+------ notify() y notifyAll(): se usa para despertar los hilos que estan esperando un acceso a un recurso compartido

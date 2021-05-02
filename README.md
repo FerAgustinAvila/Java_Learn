@@ -136,3 +136,18 @@ ___
 
 * Exceptions
     * Example / Learn
+
+___
+
+## Thirteenth Part
+
+* Collections
+    * Example / Learn
+
+___
+
+## FourteenthPart Part
+
+* Threads
+    * Example / Learn
+  

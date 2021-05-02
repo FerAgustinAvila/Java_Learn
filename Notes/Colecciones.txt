@@ -1,0 +1,56 @@
+
+Los Collection es un API para agrupacion de objetos, consta de tres tipos: 
+    - List
+        Almacenara objetos en una secuencia determinada.
+        Es ordenada, a medida que agregamos elementos va quedando ordenados en esa secuencia. Tambien se le puede aplicar un metodo mas especifico, ejemplo metodo sort implementando algun contrato como el Comparator. Permite almecenar objetos duplicados.        
+    - Map
+        Almacenan información en base a parejas de llaves y valores.
+        Arreglo asociativo.
+    - Set
+        No permite elementos duplicados y no mantiene el orden de sus elementos. 
+        Mas simples pero estrictos.
+
+Todos crecen de forma automatica a medida que agregamos elementos.
+
+
+interface
+Collection | interface
+           -> List
+                |
+                -> ArrayList    ---------- Lista volcada en un arreglo. Acceso rapido,      de lectura. Desventaja en cuanto a manipulacion de los elementos, eliminar, agregar, mal rendimiento. No es sincronizado
+                -> LinkedList   ---------- Lista enlazada. Permite la manipulacion de los elementos, es facil obtener o eliminar elementos al principio o al final, al medio se complica. Trabaja con nodos. No es sincronizado
+                -> Vector       ---------- Similar al ArrayList, pero si es sincronizado.
+           -> Set Trabajan con Map.
+                |
+                -> HashSet       ---------- No mantiene orden, ni siquiera de insercion. No permite duplicado. Mas rapido que el TreeSet, mejor rendimiento. Implementa HashCode.
+                -> LinkedHashSet ---------- Combinacion entre HashSet y lista enlazda. Mantiene el orden en que se agregan los elementos
+                -> TreeSet       ---------- Es ordenado y no permite duplicado. Similar a un list. Mal rendimiento ya que al manipular la coleccion se tiene que volver a ordenar.
+
+Map         | Se almacenan datos segun una llave y un valor.
+            -> HashMap           ---------- Implementa HashCode que permite compararse y evitar elementos duplicados.
+            -> LinkedHashMap
+            -> TreeMap           ---------- Mapa ordenado
+
+
+Metodos comunes de colecciones
+add( Object )           - Agrega elemento
+addAll( Collection )    - Agrega una coleccion que se pasa por argumento
+clear()                 - Elimina todos los elementos
+contains( Object )      - Devuelve un boolean de acuerdo a si existe un elemento en la coleccion
+isEmpty()               - Devuelve boolean segun si la collection esta vacia o no
+iterator()              - Devuelve un objeto iterator que se puede utilizar para avanzar a traves de los elementos
+remove( Object )        - Elimina un elemento, devuelve true si se ha conseguido
+removeAll( Collection ) - Elimina todos los elementos que estan contenidos en el argumento
+retainAll( Collection ) - Mantiene solamente los elementos que estan contenidos en el argumento.
+size()                  - Devuelve la cantidad de elementos que componen la coleccion
+
+
+Metodos adicionales de LinkedList
+addFirst
+addLast
+getFirst
+getLast
+removeFirst
+removeLast
+
+getFirst, getLast, removeFirst, removeLast lanzan NoSuchElementException si la lista esta vacia.
