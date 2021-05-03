@@ -151,3 +151,9 @@ ___
 * Threads
     * Example / Learn
   
+___
+
+## Fifteenth Part
+
+* Expression Lambda
+    * Example / Learn
