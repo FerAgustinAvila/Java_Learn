@@ -1,0 +1,7 @@
+Combina las mejores ideas del Iterator y la programacion funcional para implementar flujos de datos.
+
+Crea flujos de datos continuos que contiene operadores para procesar secuencias de elementos.
+Los operadores reducen notablemente las tareas de transformaciones.
+Transforma y compone flujos con los operadores map, filter, concat, distinct, flatmap, sorted, foreach, reduce, etc.
+Pueden ser creados desde listas, arreglos, rangos.
+Son inmutables.

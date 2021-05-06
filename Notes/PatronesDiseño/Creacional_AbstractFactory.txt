@@ -1,0 +1,4 @@
+Nos permite producir familias de objetos relacionados sin especificar sus clases concretas.
+
+
+https://refactoring.guru/es/design-patterns/abstract-factory

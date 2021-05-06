@@ -1,0 +1,5 @@
+
+Nos permite crear una sola instancia de la clase.
+Comunmente usada en conexion a base de datos, o pull de conexiones.
+
+Está diseñado para restringir la creación de objetos pertenecientes a una clase o el valor de un tipo a un único objeto. Su intención consiste en garantizar que una clase sólo tenga una instancia y proporcionar un punto de acceso global a ella.

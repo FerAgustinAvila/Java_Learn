@@ -1,0 +1,14 @@
+
+Son fragmentos de codigo, algoritmos que nos permites resolver, solucionar algun problema cotidiano. 
+ Erich Gamma
+ Richard Helm
+ Ralph Johnson
+ John Vlissides
+
+
+Tipos:
+    - Creación: Estos patrones se utilizan cuando debemos crear objetos pero debemos tomar decisiones dinámicamente en el proceso de creación.
+
+    - Estructurales: Nos describen como utilizar estructuras de datos complejas a partir de elementos más simples
+
+    - De comportamiento.

@@ -1,0 +1,26 @@
+
+Simplica drasticamente el manejo de fecha y hora en java.
+Clara, concisa y facil de entender como la numeracion de los campos.
+Tiene muchas representaciones de tiempos diferentes, cada una adecuada para diferentes casos de uso.
+Son inmutables.
+
+__________________ Representaciones __________________
+Instant : representa un punto en el tiempo ( marca de tiempo )
+LocalDate : representa una fecha ( año, mes, dia )
+LocalDateTime : igual que LocalDate, pero incluye la hora con precision en nanosegundos.
+OffsetDateTime : igual que LocalDateTime, pero con ajuste de zona horaria.
+LocalTime : hora con precision de nanosegundos y sin informacion de fecha.
+ZonedDateTime : igual que OffsetDateTime, pero incluye ID de zona horaria.
+OffsetLocalTime : igual que LocalTime, pero con ajuste de zona horaria.
+MonthDat : mes y dia, sin año ni hora
+YearMonth : mes y año, sin dia ni hora
+Duration : cantidad de tiempo representada en segundos, minutos y horas. Tiene preciosion de nanosegundos.
+Perio : cantidad de tiempo representada en dias, meses y años.
+DateTimeFormatter : para dar formato a nuestras fechas.
+
+plusDay() - suma dias
+minutosMonth() - resta mes
+
+
+https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+ZoneId.of("America/New_York)

@@ -157,3 +157,31 @@ ___
 
 * Expression Lambda
     * Example / Learn
+
+___
+
+## Sixteenth Part
+
+* API Stream
+    * Example / Learn
+
+___
+
+## Seventeenth Part
+
+* Class Optional
+    * Example / Learn
+
+___
+
+## EighteenthPart Part
+
+* Design Patterns
+    * Singleton
+    * Composite
+    * Decorator
+    * Abstract Factory
+    * Observer
+
+    * Examples
+    

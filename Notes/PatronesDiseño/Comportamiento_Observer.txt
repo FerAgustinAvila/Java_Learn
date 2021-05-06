@@ -1,0 +1,4 @@
+Permite a un objeto notificar a otros objetos sobre cambios en su estado.
+Proporciona una forma de suscribirse y cancelar la subscripción a estos eventos para cualquier objeto que implementa una interfaz suscriptora.
+
+https://refactoring.guru/es/design-patterns/observer/java/example
