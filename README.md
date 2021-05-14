@@ -184,4 +184,11 @@ ___
     * Observer
 
     * Examples
+
+___
+
+## NineteenthPart Part
+
+* JDBC
+    * With/without singleton
     

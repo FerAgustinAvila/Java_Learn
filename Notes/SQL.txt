@@ -1,0 +1,50 @@
+
+Structured Query Language - Utilizado para administrar y acceder a datos de un sistema de gestion de bases de datos relacionales ( RDBMS ).
+
+Es universal independiente del motor de base de datos en cuestion(MySQL, SQLServer, OracleServer, PostgreSQL)
+
+DML Data Manipulation Language - Es un lenguaje declarativo para realizar consultas y/o manipulacion de los datos de una tabla de la BBDD.
+Entre las sentencias DML se incluyen: SELECT, INSERT, UPDATE y DELETE.
+
+----------------------------------------------------------------
+SELECT
+
+SELECT * FROM productos;
+SELECT * FROM productos WHERE codigo = 3;
+SELECT * FROM personas WHERE nombre = 'Julian' AND fecha_nac >= '1995-10-18'
+
+
+----------------------------------------------------------------
+INSERT
+
+INSERT INTO agenda_telefonica ( nombre, numero ) VALUES ('Maxi', 1533333210);
+INSERT INTO usuario (nombre,apellido,edad,carrera) VALUES ('Francisco','Gomez',"26",'Ingenieria')
+INSERT INTO productos (nombre,precio,fecha) VALUES ('Bicicleta',100,'2020-08-16')
+
+
+----------------------------------------------------------------
+UPDATE
+
+UPDATE usuarios SET password = 'avsiempre123'
+UPDATE usuarios SET password = 'pass123pablo' WHERE username = 'pablo';
+UPDATE usuarios SET username ='admin', password='passadmin' WHERE username = 'pablo'
+UPDATE productos SET precio=200, nombre='Mountain Bike' WHERE id =7
+
+
+----------------------------------------------------------------
+DELETE
+
+
+DELETE FROM usuarios;
+DELETE FROM usuarios WHERE nombre = 'Tomas'
+DELETE FROM productos WHERE id=5
+
+
+================================================================
+DDL Data Definition Language - Es el lenguaje que se encarga de la definicion y modificacion de la estructura de las tablas e integridad referencial, para modificar, borrar o definir las tablas, columnas, relaciones, reglas.
+Sentencias -> CREATE, ALTER, DROP y TRUNCATE.
+
+CREATE TABLE clientes;
+ALTER TABLE alumnos ADD edad INT UNSIGNED;
+DROP TABLE alumnos; // elimina la tabla
+TRUNCATE TABLE nombre_tabla; // elimina todos los datos de la tabla

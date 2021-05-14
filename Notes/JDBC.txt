@@ -1,0 +1,76 @@
+
+Java Database Connectivity - Es una API que permite la ejecucion de operaciones y consultas sobre bases de datos desde JAVA.
+
+Independietemente del SO donde se ejecute o de la base de datos a la cual se accede.
+Es una collecion de interfaces JAVA y metodos para la gestion y conexion hacia cada motor especifico de base de datos.
+Cada proveedor de base de datos debe implementar su propio driver o adaptador.
+
+
+
+Principales Interfaces/Clases
+Driver - Permite conectarse a una DB, cada gestor de BD requiere un driver distinto.
+DriverManager - Permite gestionar todos los drivers instalados en el sistema.
+Connection - Representa una conexion con una BD. Una app puede tener mas de una conexion a una BD.
+DatabaseMetadata - Proporciona info acerca de una BD, como las tablas que contiene, etc.
+Statement - Permite ejecutar sentencias SQL sin parametros.
+PreparedStatement - Permite ejecutar sentencias SQL con parametros de entrada.
+CallableStatement - Permite ejecutar sentencias SQL con parametros de entrada y salida, tipicamente procedimientos almacenados.
+ResultSet - Contiene las filas o registros obtenidos al ejecutar una secuencia SELECT.
+ResultSetMetadata - Permite obtener info sobre un ResultSet, como el numero de columnas, sus nombres, etc.
+
+---------------------------------------------------------------------
+
+String url = "jdbc:mysql://localhost:3306/nombre_db";
+String username = "root";
+String password = "root";
+
+Connection con = DriverManager.getConnection(url, username, password);
+
+Statement stmt = con.createStatement();
+
+ResultSet resultado = stmt.executeQuery("select * from productos");
+
+while( resultado.next() ){
+    System.out.println( resultado.getInt("id") ); // otra opcion resultado.getInt(1)
+    System.out.println(" | ");
+    System.out.println( resultado.getString("nombre") );
+    System.out.println(" | ");
+    System.out.println( resultado.getDouble("precio") );
+    System.out.println(" | ");
+    System.out.println( resultado.getDate("fecha") );
+}
+
+resultado.close();
+stmt.close();
+con.close();
+
+
+-------------------------
+
+int resultado = stmt.executeUpdate("INSERT INTO productos (nombre,precio,fecha) VALUES ( 'Bicicleta',15000, NOW() )");
+
+int resultado = stmt.executeUpdate("UPDATE productos SET precio=20000, nombre='Mountain Bike' WHERE id =7")
+
+int resultado = stmt.executeUpdate("DELETE FROM productos WHERE id=5")
+
+
+
+
+
+
+---------------------------------------------------------------------
+
+PreparedStatement stmt = con.prepareStatement("SELECT * FROM productos WHERE id =?");
+stmt.setInt(1,4);
+
+ResultSet resultado = stmt.executeQuery();
+
+
+---------------------------------------------------------------------
+
+PreparedStatement insertStmt = con.prepareStatement("INSERT INTO productos(nombre,precio,fecha) VALUES (?,?,?)");
+insertStmt.setString(1,"TV Samsung");
+insertStmt.setDouble(2,14000.00);
+insertStmt.setDate(3, new Date(System.currentTimeMillis() ));
+
+insertStmt.executeUpdate();
