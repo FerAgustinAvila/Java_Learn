@@ -1,0 +1,35 @@
+
+Una transaccion es un conjunto de operaciones sobre la base de datos que se deben ejecutar como una unidad de trabajo.
+
+En otras palabras 
+----
+Varias sentencias se ejecutan en un bloque de ejecución sobre la base de datos como si fuera una sola.
+----
+
+Si alguna de las sentencias falla en su ejecucion podemos dar marcha atras con rollback a todo el bloque en ejecución. Es decir, que se ejecutan todas las instrucciones o ninguna.
+
+Si todo se ejecuta correctamente aplicamos los cambios sobre las tablas realizando el commit de todo el bloque ejecutado.
+
+_____________________________
+
+Pasos para realizar transacciones JDBC
+
+1. Cambiar la propiedad autocommit de la conexion a false.
+2. Si todo sale bien realizamos un commit para guardar los cambios en la base de datos.
+3. Si falla alguna sentencia realizamos un rollback para revertir los cambios.
+4. Al cerrar la conexion se realiza un commit automaticamente, inclusive si la propiedad autocommit es false.
+
+_____________________________
+
+try( Connection conn = getConnection() ){
+
+    conn.setAutoCommit( false );
+
+    // Se ejecuta un conjunto de sentencias
+    // como un bloque: select, update, insert, delete
+
+    conn.commit()
+} catch ( SQLException e){
+    e.printStackTrace();
+    getConnection().rollback();
+}

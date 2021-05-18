@@ -1,0 +1,2 @@
+
+Son un proceso de examen para verificar que una pieza de codigo cumple con ciertas reglas de negocio y afirmar un resultado esperado.

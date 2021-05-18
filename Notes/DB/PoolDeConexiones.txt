@@ -1,0 +1,24 @@
+
+Es una clase DataSource que mantiene abiertas un conjunto limitado de conexiones a la base de datos.
+
+
+_________________________________________________________________________________
+
+BasicDataSource pool = new BasicDataSource();
+pool.setUrl( url );
+pool.setUsername( username );
+pool.setPassword( password );
+
+pool.setInitialSize( 3 );
+pool.setMinIdle( 3 );
+pool.setMaxIdle( 10 );
+pool.setMaxTotal( 10 );
+_________________________________________________________________________________
+
+// Se pide una conexion libre
+Connection conn = pool.getConnection();
+
+// Se ejecuta una  o mas sentencias: select, update, insert, delete
+
+// Se libera la conexion para su posible uso por otro hilo
+conn.close();

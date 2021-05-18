@@ -1,0 +1,4 @@
+
+Mockito es un framework de pruebas que nos permite crear objetos simulados( mock ) en un entorno controlado y determinado.
+
+Le podemos dar un comportamiento deseado a un mock.

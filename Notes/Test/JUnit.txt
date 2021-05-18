@@ -1,0 +1,24 @@
+                    JUnit5
+
+Es un framework para escribir pruebas unitarias de nuestro codigo y ejecutarlas en la JVM. Utiliza la programacion funcional y lambda e incluye varios estilos diferentes de pruebas, configuraciones, anotaciones, ciclo de vida, etc.
+
+__________________________________________________________
+                    JUnit Jupiter
+
+API para escribir nuestros test.
+Agrega nuevo modelo y caracteristicas en Junit 5.
+Nuevas anotaciones y estilos de testing.
+Permite escribir extensiones.
+
+
+---- Anotaciones
+@Test
+@DisplayName
+@Nested
+@Tag
+@ExtendWith
+@BeforeEach
+@AfterEach
+@BeforeAll
+@AfterAll
+@Disable
