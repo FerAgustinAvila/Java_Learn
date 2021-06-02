@@ -1,0 +1,40 @@
+
+Un conjunto de especificaciones, parte de la plataforma Java para desarrollar y ejecutar aplicaciones web utilizando arquitecturas de N capas que se despliegan sobre un servidor de aplicaciones.
+
+_______________________________________________________________
+
+                Cliente
+                -     *
+    Http Request|     | Http Response
+                *     -
+                Capa Web MVC( JSP y JSF - Servlets - Model )
+                    |
+                    *
+                Capa Servicio( EJBs - Servicios Rest )
+                    |
+                    *
+                Capa Datos ( Repositorios - Objetos JPA - JDBC )
+
+    
+Servidor de aplicaciones 
+    |
+    --> Contenedor Web
+    |            |
+    |             --> Capa Web MVC
+    |
+    |
+    -----------------> Contenedor EJB
+                            |
+                             --> Capa Servicio
+                             --> Capa Datos
+
+_______________________________________________________________
+
+Caracteristicas
+- Componentes web
+- Interoperabilidad
+- Control de concurrencia
+- Transaccionalidad
+- Persistencia JPA
+- Inyenccion de dependencias
+- Seguridad

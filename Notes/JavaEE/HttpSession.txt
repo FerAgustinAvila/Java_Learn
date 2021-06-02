@@ -1,0 +1,30 @@
+
+Es otra opcion para almacenar datos del usuario que sean persistentes en diferentes request y se almacena en el lado del servidor.
+
+Los datos no se comparten entre diferentes objetos de sesion.
+Las sesiones http nos permiten una forma para mantener informacion del usuario entre peticion y poder recodarlas.
+Tambien contiene pares clave-valor, pero en comparacion con una cookie, una sesion puede contener un objeto como valor.
+
+
+==============================================================
+                    CREAR SESION
+HttpSession session = request.getSession();
+
+                    OBTENER VALOR
+String username = session.getAttribute("username");
+
+                    GUARDAR OBJETO
+session.setAttribute("username", username);
+
+                    ELIMINAR VALOR DE SESION
+session.removeAttribute("username");
+
+                    ELIMINAR O INVALIDAR SESION
+session.invalidate();
+
+                    OTROS METODOS
+isNew();
+getCreationTime();
+getLastAccessedTime();
+getMaxInactiveInterval();
+setMaxInactiveInterval(int interval);

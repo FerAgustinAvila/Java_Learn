@@ -1,0 +1,16 @@
+
+Es una clase y objeto Java utilizado para implementar una pagina web dinamica con caracteristicas HTTP de peticion y respuesta.
+
+
+_______________________________________________________________
+Request (peticion web)
+    Informacion que es enviada desde un cliente hacia el servidor.
+    Datos ingresados e enviados por el usuario
+    Metodo HTTP (GET o POST)
+    Cabeceras HTTP (headers)
+
+_______________________________________________________________
+Response (respuesta web)
+    Informacion que es enviada al cliente desde el servidor.
+    Texto (html, plain, json, xml) o datos binarios ( imagenes, pdf, videos)
+    HTTP headers, cookies, etc

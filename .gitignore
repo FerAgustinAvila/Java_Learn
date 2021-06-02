@@ -1,7 +1,10 @@
 /**/out/
 **/out/
 **/**/out/
-**/.idea/
-./**/**/.idea/
 *.iml
 *.idea
+*.settings
+*.classpath
+*.project
+**target
+

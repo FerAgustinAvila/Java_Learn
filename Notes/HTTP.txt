@@ -1,0 +1,2 @@
+
+El protocolo de transferencia de hipertexto permite la comunicacion entre un cliente, normalmente un navegador web y un servidor web para compartir datos en diferentes formatos ( html, json, imagenes, videos, pdf, etc ) en la World Wide Web.

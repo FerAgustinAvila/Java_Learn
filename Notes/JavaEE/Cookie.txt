@@ -1,0 +1,32 @@
+
+Son datos del usuario almacenados en el navegador web(lado del cliente) y los servidores la utilizan cuando se comunican con el cliente.
+
+Una de las caracteristicas de las peticiones HTTP es que no manejan estado de los datos del request, por eso es la importancia del manejo de sesiones o cookies HTTP.
+Nos permiten una forma para mantener informacion del usuario entre peticiones y poder recodarlas.
+Existen dos formas de mantener informacion del usuario, una es usando cookies y otra el objeto HttpSession del API Servlet.
+
+
+================================================================
+                            CREAR COOKIE
+
+Para enviarla al cliente, necesitamos crearla con un nombre y un valor asociado, luego agregarla a la respuesta
+
+Cooki username = new Cookie("username", "fer");
+response.addCookie(username);
+
+
+                            LEER COOKIE
+                    
+Cookie[] cookies = request.getCookies();
+String username = Arrays.stream( cookies )
+                        .filter(c -> "username".equals(c.getName()))
+                        .map(Cookie::getValue)
+                        .findFirst()
+                        .orElse(null);
+
+
+                            ELIMINAR COOKIE
+
+Cookie username = new Cookie("username", "");
+username.setMaxAge(0);
+response.addCookie(username)
