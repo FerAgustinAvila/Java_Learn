@@ -1,6 +1,6 @@
 
 
-Es cuando tenemos una jerarquia de clases en que algun comportamiento esta presente en todas elloas pero se materializa de formas distintas en cada una.
+Es cuando tenemos una jerarquia de clases en que algun comportamiento esta presente en todas ellas pero se materializa de formas distintas en cada una.
 
 Una clase abstracta podria contener metodos abstractos, es decir, sin implementacion.
 Estan diseñadas para ser una superclase y no puede ejemplarizarse.

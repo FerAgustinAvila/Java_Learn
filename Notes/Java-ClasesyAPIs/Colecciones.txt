@@ -8,16 +8,20 @@ Los Collection es un API para agrupacion de objetos, consta de tres tipos:
         Arreglo asociativo.
     - Set
         No permite elementos duplicados y no mantiene el orden de sus elementos. 
+        No se puede obtener elemento por elemento, pero si recorrer.
         Mas simples pero estrictos.
 
-Todos crecen de forma automatica a medida que agregamos elementos.
+Una List puede ser usada cuando el orden de agregacion tiene que mantenerse.
+Podemos usar Set si necesitamos una coleccion que no permita duplicados.
+Y Map cuando los datos son pares clave-valor y necesitan una recuperación rápida del valor en función de alguna clave.
 
+Todos crecen de forma automatica a medida que agregamos elementos.
 
 interface
 Collection | interface
            -> List
                 |
-                -> ArrayList    ---------- Lista volcada en un arreglo. Acceso rapido,      de lectura. Desventaja en cuanto a manipulacion de los elementos, eliminar, agregar, mal rendimiento. No es sincronizado
+                -> ArrayList    ---------- Lista volcada en un arreglo. Acceso rapido, de lectura. Desventaja en cuanto a manipulacion de los elementos, eliminar, agregar, mal rendimiento. No es sincronizado
                 -> LinkedList   ---------- Lista enlazada. Permite la manipulacion de los elementos, es facil obtener o eliminar elementos al principio o al final, al medio se complica. Trabaja con nodos. No es sincronizado
                 -> Vector       ---------- Similar al ArrayList, pero si es sincronizado.
            -> Set Trabajan con Map.

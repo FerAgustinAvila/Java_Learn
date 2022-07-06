@@ -3,6 +3,8 @@ Una excepcion es un problema o evento que ocurre durante la ejecucion del progra
 
 El manejo de excepciones nos permite manejar el error y continuar con la ejecucion del programa.
 
+
+Todas las excepciones en Java heredan de Throwable subdividiéndose en Error y Exception, las primeras son condiciones de error del sistema y las segundas condiciones de error del programa. A su vez las Exception pueden ser checked si heredan de esta y son aquellas que el compilador fuerza a que sean capturadas no pudiendo ignorarse, han de capturarse en una construcción try catch o declarar que el método puede lanzar la excepción no capturada. Las excepciones unchecked heredan de RuntimeException que heredan a su vez de Exception pero tienen la particularidad de que no es necesario capturarlas ni declararlas como que se pueden lanzar debido a que se consideran condiciones de error en la programación como un acceso a un array fuera de rango que produce un ArrayIndexOutOfBounds, el conocido NullPointerException cuando se utiliza una referencia nula, otro es ArithmeticException que se produce al dividir por 0.
 ________________________________________________________________________
                         Estructura
 

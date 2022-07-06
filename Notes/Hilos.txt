@@ -1,9 +1,7 @@
 Threads.
 
-Objetos que dan la capacidad dehacer mas de una tarea al mismo tiempo.
+Objetos que dan la capacidad de hacer mas de una tarea al mismo tiempo.
 Un proceso puede tener varios hilos.
-
-
 
 ________ Ciclo de vida de un Thread ________
 ---- NEW

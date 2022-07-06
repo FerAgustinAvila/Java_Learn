@@ -1,5 +1,5 @@
 
-Simplica drasticamente el manejo de fecha y hora en java.
+Simplifica drasticamente el manejo de fecha y hora en java.
 Clara, concisa y facil de entender como la numeracion de los campos.
 Tiene muchas representaciones de tiempos diferentes, cada una adecuada para diferentes casos de uso.
 Son inmutables.

@@ -1,0 +1,26 @@
+Anteriormente conocido como SAM(Single Abstract Method).
+
+Posee uno solo y solo un metodo abstracto. Es decir, para que una interfaz sea funcional debe cumplir con un solo requisito: Solo debe tener un método abstracto.
+Una interfaz puede tener cualquier cantidad de métodos implementados siempre y cuando sean declarados como default.
+La otra característica es que las interfaces pueden tener métodos estáticos implementados.
+
+Toda @FunctionalInterface es una Functional Interface, pero no toda Functional Interface es @FunctionalInterface.
+Es decir, las Functional Interface son un conjunto y las @FunctionalInterface son un subconjunto.
+
+
+
+Ejemplo
+
+public class Principal {
+
+    @FunctionalInterface
+    interface Matematicas {
+        public double operacion(double x, double y);
+    }
+    
+    public static void main(String[] args) {
+        Matematicas o = (x, y) -> x + y;
+        System.out.println(o.operacion(2, 3));
+    }
+
+}

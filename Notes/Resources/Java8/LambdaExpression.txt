@@ -1,0 +1,27 @@
+Una expresión lambda es esencialmente una función sin nombre, que tiene un cuerpo de función y puede o no recibir parámetros.
+
+En Java, una expresión lambda siempre va a representar el método abstracto de una interfaz funcional.
+
+La expresión lambda va a separar su lista de parámetros de su cuerpo de función por medio del operador flecha ->
+
+Estructura: 
+LambdaParameters -> LambdaBody
+
+Ejemplo
+(a, b) -> a + b
+
+es lo mismo que
+(a, b) -> {
+    if (a < 0) {
+        return 0;
+    }
+    return a + b;
+}
+
+int m (int a, int b) = (a, b) -> a
+                       (int a, int b) -> a
+int m (int a)        = (a) -> a
+                        a -> a
+                        a -> { return a; }
+int m ()             = () -> 5
+void m (int b)       = (a) -> {}

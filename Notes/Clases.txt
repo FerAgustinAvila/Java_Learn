@@ -1,6 +1,6 @@
 CLASE ABSTRACTA vs CLASE INTERFAZ
 
-Las clases abstractas y en general la herencia herencia agrupa clases que tiene una relación de parentesco, es decir son de la misma jerarquía familiar: Avioneta es un tipo de Avión, el Hombre es un tipo de Mamifero, Chocolate es tipo de Comida, Cuadrado es una Figura Geometrica... etc.
+Las clases abstractas y en general la herencia agrupa clases que tiene una relación de parentesco, es decir son de la misma jerarquía familiar: Avioneta es un tipo de Avión, el Hombre es un tipo de Mamifero, Chocolate es tipo de Comida, Cuadrado es una Figura Geometrica... etc.
 
 En la clase Abstracta se refiere a que los métodos se declaran o escriben anteponiendo la palabra clave abstract, pero no tiene programación interna, es decir los métodos van sin código, sin implementación (no van las llaves típicas de los métodos), solo la firma del método:
 
